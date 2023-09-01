@@ -12,7 +12,7 @@ namespace SampleVideoEffects.SampleHLSLShaderEffect
         public static byte[] GetShaderResource(string name)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = $"SampleVideoEffects.SampleHLSLShaderEffect.{name}";
+            var resourceName = $"SampleVideoEffects.SampleHLSLShaderVideoEffect.{name}";
             using var stream = assembly.GetManifestResourceStream(resourceName) ?? throw new Exception($"Resource {resourceName} not found.");
             var bytes = new byte[stream.Length];
             stream.Read(bytes, 0, bytes.Length);

@@ -26,46 +26,32 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 
 ## サンプル一覧
 ### 音声読み込みプラグイン
-- [SampleAusioSourcePlugin](./SampleSourcePlugin)
+- [SampleAusioSourcePlugin](./SampleSourcePlugin/README.md)
 
 ### 映像読み込みプラグイン
-- [SampleVideoSourcePlugin](./SampleVideoSourcePlugin)
-映像読み込みプラグインのサンプルです。  
-`fhd.txt`という名前のファイルを1920x1080の透過映像として読み込みます。
+- [SampleVideoSourcePlugin](./SampleVideoSourcePlugin/README.md)
 
 ### 画像読み込みプラグイン
-- [SampleWICImageSourcePlugin](./SampleWICImageSourcePlugin)
-画像読み込みプラグインのサンプルです。  
-WICを使用して画像を読み込みます。
+- [SampleWICImageSourcePlugin](./SampleWICImageSourcePlugin/README.md)
 
 ### 立ち絵読み込みプラグイン
-- [SampleTachiePlugin](./SampleTachiePlugin)
-立ち絵読み込みプラグインのサンプルです。  
-一枚の画像ファイルを立ち絵として表示するシンプルな立ち絵です。
+- [SampleTachiePlugin](./SampleTachiePlugin/README.md)
 
 ### 動画書き出しプラグイン
-- [SampleVideoWriterPlugin](./SampleVideoWriterPlugin)
-動画書き出しプラグインのサンプルです。  
-最低限プラグインとして認識される部分のみ実装しています。
+- [SampleVideoWriterPlugin](./SampleVideoWriterPlugin/README.md)
 
 ### 音声エフェクト
-- [SampleAudioEffect](./SampleAudioEffect)
-音声エフェクトのサンプルです。  
+- [SampleAudioEffect](./SampleAudioEffect/README.md)
 
 ### 映像エフェクト
-- [SampleVideoEffects](./SampleVideoEffects)
-映像エフェクトのサンプルです。
+- [SampleVideoEffects](./SampleVideoEffects/README.md)
 
 ### 音声合成プラグイン
-- [SampleSAPI5VoicePlugin](./SampleSAPI5VoicePlugin)
-音声合成プラグインのサンプルです。  
-SAPI5を使用して音声を合成します。
+- [SampleSAPI5VoicePlugin](./SampleSAPI5VoicePlugin/README.md)
 
 ### AIテキスト補完プラグイン
-- [SampleTextCompletionPlugin](./SampleTextCompletionPlugin)
-AIにセリフの続きを考えてもらう機能を追加するプラグインのサンプルです。
+- [SampleTextCompletionPlugin](./SampleTextCompletionPlugin/README.md)
 
 ### 多言語化プラグイン
-- [SampleLocalizePlugin](./SampleLocalizePlugin)
-プラグインを多言語化する際のサンプルです。
+- [SampleLocalizePlugin](./SampleLocalizePlugin/README.md)
 

@@ -26,32 +26,32 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 
 ## サンプル一覧
 ### 音声読み込みプラグイン
-- [SampleAusioSourcePlugin](./SampleSourcePlugin/README.md)
+- [SampleAudioSourcePlugin](./SampleAudioSourcePlugin/)
 
 ### 映像読み込みプラグイン
-- [SampleVideoSourcePlugin](./SampleVideoSourcePlugin/README.md)
+- [SampleVideoSourcePlugin](./SampleVideoSourcePlugin/)
 
 ### 画像読み込みプラグイン
-- [SampleWICImageSourcePlugin](./SampleWICImageSourcePlugin/README.md)
+- [SampleWICImageSourcePlugin](./SampleWICImageSourcePlugin/)
 
 ### 立ち絵読み込みプラグイン
-- [SampleTachiePlugin](./SampleTachiePlugin/README.md)
+- [SampleTachiePlugin](./SampleTachiePlugin/)
 
 ### 動画書き出しプラグイン
-- [SampleVideoWriterPlugin](./SampleVideoWriterPlugin/README.md)
+- [SampleVideoWriterPlugin](./SampleVideoWriterPlugin/)
 
 ### 音声エフェクト
-- [SampleAudioEffect](./SampleAudioEffect/README.md)
+- [SampleAudioEffect](./SampleAudioEffect/)
 
 ### 映像エフェクト
-- [SampleVideoEffects](./SampleVideoEffects/README.md)
+- [SampleVideoEffects](./SampleVideoEffects/)
 
 ### 音声合成プラグイン
-- [SampleSAPI5VoicePlugin](./SampleSAPI5VoicePlugin/README.md)
+- [SampleSAPI5VoicePlugin](./SampleSAPI5VoicePlugin/)
 
 ### AIテキスト補完プラグイン
-- [SampleTextCompletionPlugin](./SampleTextCompletionPlugin/README.md)
+- [SampleTextCompletionPlugin](./SampleTextCompletionPlugin/)
 
 ### 多言語化プラグイン
-- [SampleLocalizePlugin](./SampleLocalizePlugin/README.md)
+- [SampleLocalizePlugin](./SampleLocalizePlugin/)
 

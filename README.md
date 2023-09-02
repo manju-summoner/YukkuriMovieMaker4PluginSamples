@@ -55,3 +55,18 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 ### 多言語化プラグイン
 - [SampleLocalizePlugin](./SampleLocalizePlugin/)
 
+## リポジトリのトピック
+プラグインをGitHubで公開する場合、検索性向上のためリポジトリの[Topics欄](https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)に以下のトピックを設定することを推奨します。
+
+| 種類 | トピック |
+| --- | --- |
+| 共通 | [ymm4-plugin](https://github.com/topics/ymm4-plugin) |
+| 音声読み込みプラグイン | [ymm4-audio-source](https://github.com/topics/ymm4-audio-source) |
+| 映像読み込みプラグイン | [ymm4-video-source](https://github.com/topics/ymm4-video-source) |
+| 画像読み込みプラグイン | [ymm4-image-source](https://github.com/topics/ymm4-image-source) |
+| 立ち絵プラグイン | [ymm4-tachie](https://github.com/topics/ymm4-tachie) |
+| 動画出力プラグイン | [ymm4-video-writer](https://github.com/topics/ymm4-video-writer) |
+| 音声エフェクト | [ymm4-audio-effect](https://github.com/topics/ymm4-audio-effect) |
+| 映像エフェクト | [ymm4-video-effect](https://github.com/topics/ymm4-video-effect) |
+| 音声合成プラグイン | [ymm4-voice](https://github.com/topics/ymm4-voice) |
+| AIテキスト補完プラグイン | [ymm4-text-completion](https://github.com/topics/ymm4-text-completion) |

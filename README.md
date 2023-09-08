@@ -37,6 +37,9 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 ### 立ち絵読み込みプラグイン
 - [SampleTachiePlugin](./SampleTachiePlugin/)
 
+### 図形プラグイン（未実装。2023/10/01リリース予定）
+- [SampleShapePlugin](./SampleShapePlugin/)
+
 ### 動画書き出しプラグイン
 - [SampleVideoWriterPlugin](./SampleVideoWriterPlugin/)
 
@@ -65,6 +68,7 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 | 映像読み込みプラグイン | [ymm4-video-source](https://github.com/topics/ymm4-video-source) |
 | 画像読み込みプラグイン | [ymm4-image-source](https://github.com/topics/ymm4-image-source) |
 | 立ち絵プラグイン | [ymm4-tachie](https://github.com/topics/ymm4-tachie) |
+| 図形プラグイン | [ymm4-shape](https://github.com/topics/ymm4-shape) |
 | 動画出力プラグイン | [ymm4-video-writer](https://github.com/topics/ymm4-video-writer) |
 | 音声エフェクト | [ymm4-audio-effect](https://github.com/topics/ymm4-audio-effect) |
 | 映像エフェクト | [ymm4-video-effect](https://github.com/topics/ymm4-video-effect) |

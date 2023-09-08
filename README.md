@@ -59,7 +59,8 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 - [SampleLocalizePlugin](./SampleLocalizePlugin/)
 
 ### コントロールの一覧とカスタムコントロール
-- [SamplePropertyEditors](./SamplePropertyEditores/)
+- [SamplePropertyEditors](./SamplePropertyEditors/)
+
 アイテム編集エリアで利用できるコントロールの一覧と、カスタムコントロールのサンプルです
 
 ## リポジトリのトピック

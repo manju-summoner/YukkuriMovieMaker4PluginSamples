@@ -11,6 +11,7 @@ namespace SampleVideoEffects.SampleHLSLShaderEffect
     {
         public static byte[] GetShaderResource(string name)
         {
+            //埋め込まれたシェーダーを読み込む
             var assembly = Assembly.GetExecutingAssembly();
             var resourceName = $"SampleVideoEffects.SampleHLSLShaderVideoEffect.{name}";
             using var stream = assembly.GetManifestResourceStream(resourceName) ?? throw new Exception($"Resource {resourceName} not found.");

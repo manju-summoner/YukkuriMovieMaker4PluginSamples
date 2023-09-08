@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="SamplePropertyEditors.CustomPropertyEditor.IncreaseDecreaseButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SamplePropertyEditors.CustomPropertyEditor"
+             mc:Ignorable="d" 
+             d:DesignWidth="300" Name="this">
+    <Grid Height="26">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26"/>
+            <ColumnDefinition Width="26"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="{Binding ElementName=this,Path=Value}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0"/>
+        <Button Grid.Column="1" Content="+" Command="{Binding ElementName=this, Path=IncreaseCommand}"/>
+        <Button Grid.Column="2" Content="-" Command="{Binding ElementName=this, Path=DecreaseCommand}"/>
+    </Grid>
+</UserControl>

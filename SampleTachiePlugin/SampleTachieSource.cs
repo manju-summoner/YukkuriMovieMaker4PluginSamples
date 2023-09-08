@@ -26,8 +26,20 @@ namespace SampleTachiePlugin
 
             empty = devices.DeviceContext.CreateEmptyBitmap();
             transformEffect = new Vortice.Direct2D1.Effects.AffineTransform2D(devices.DeviceContext);
-            output = transformEffect.Output;
+            output = transformEffect.Output;//EffectからgetしたOutputは必ずDisposeする必要がある。Effect側では開放されない。
         }
+
+        /// <summary>
+        /// 表示を更新する
+        /// </summary>
+        /// <param name="tachieTime">立ち絵アイテム基準の相対時間</param>
+        /// <param name="tachieLength">立ち絵アイテムの長さ</param>
+        /// <param name="faceTime">ボイス・表情アイテム基準の相対時間</param>
+        /// <param name="faceLength">ボイス・表情アイテムの長さ</param>
+        /// <param name="characterParameter">キャラクターに設定されている立ち絵パラメーター</param>
+        /// <param name="itemParameter">立ち絵アイテムに設定されている立ち絵パラメーター</param>
+        /// <param name="faceParameter">ボイス・表情アイテムに設定されている表情パラメーター</param>
+        /// <param name="kuchipaku">口パクの開き具合0~1</param>
         public void Update(TimeSpan tachieTime, TimeSpan tachieLength, TimeSpan faceTime, TimeSpan faceLength, ITachieCharacterParameter characterParameter, ITachieItemParameter itemParameter, ITachieFaceParameter faceParameter, double kuchipaku)
         {
             var ip = itemParameter as SampleTachieItemParameter;
@@ -55,8 +67,8 @@ namespace SampleTachiePlugin
 
         public void Dispose()
         {
-            transformEffect.SetInput(0, null, true);
-            output.Dispose();
+            transformEffect.SetInput(0, null, true);//EffectのInputは必ずnullに戻す。
+            output.Dispose();//EffectからgetしたOutputは必ずDisposeする必要がある。Effect側では開放されない。
             transformEffect.Dispose();
             empty.Dispose();
             source?.Dispose();

@@ -6,6 +6,7 @@ namespace SampleSAPI5VoicePlugin
     public class SAPI5VoiceSpeaker : IVoiceSpeaker
     {
         //同時実行数に制限のあるAPIを使用する場合はsemaphoreを使って同時実行数を制御する必要がある。
+        //他の話者も含めて同時実行数を制限するため、staticにする。
         static readonly SemaphoreSlim semaphore = new(1);
 
         /// <summary>

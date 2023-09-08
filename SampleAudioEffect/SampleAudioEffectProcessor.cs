@@ -8,8 +8,10 @@ namespace SampleAudioEffect
         readonly SampleAudioEffect item;
         readonly TimeSpan duration;
 
+        //出力サンプリングレート。リサンプリング処理をしない場合はInputのHzをそのまま返す。
         public override int Hz => Input?.Hz ?? 0;
 
+        //出力するサンプル数
         public override long Duration => (long)(duration.TotalSeconds * Input?.Hz ?? 0) * 2;
 
         public SampleAudioEffectProcessor(SampleAudioEffect item, TimeSpan duration)
@@ -18,11 +20,13 @@ namespace SampleAudioEffect
             this.duration = duration;
         }
 
+        //シーク処理
         protected override void seek(long position)
         {
             Input?.Seek(position);
         }
 
+        //エフェクトを適用する
         protected override int read(float[] destBuffer, int offset, int count)
         {
             Input?.Read(destBuffer,offset,count);

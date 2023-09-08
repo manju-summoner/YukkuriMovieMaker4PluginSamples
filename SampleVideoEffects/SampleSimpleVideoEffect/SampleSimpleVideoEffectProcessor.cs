@@ -16,6 +16,11 @@ namespace SampleVideoEffects.SampleSimpleEffect
             this.item = item;
         }
 
+        /// <summary>
+        /// エフェクトを更新する
+        /// </summary>
+        /// <param name="effectDescription">エフェクトの描画に必要な各種情報</param>
+        /// <returns>描画位置等の情報</returns>
         public DrawDescription Update(EffectDescription effectDescription)
         {
             var frame = effectDescription.ItemPosition.Frame;

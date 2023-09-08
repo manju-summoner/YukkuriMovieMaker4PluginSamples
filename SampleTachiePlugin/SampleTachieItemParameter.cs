@@ -7,10 +7,15 @@ namespace SampleTachiePlugin
 {
     class SampleTachieItemParameter : TachieItemParameterBase
     {
-        string? file;
+        /// <summary>
+        /// アイテム編集エリアに表示する立ち絵の設定項目。
+        /// [Display]と[TextBoxSlider]等のアイテム編集コントロール属性の2つを設定する必要があります。
+        /// [TextBoxSlider]以外のアイテム編集コントロール属性の一覧はSamplePropertyEditorsプロジェクトを参照してください。
+        /// </summary>
         [Display(Name = "ファイル", Description = "立ち絵画像ファイル")]
         [FileSelectorForTachieParameter]
         public string? File { get => file; set => Set(ref file, value); }
+        string? file;
 
         protected override IEnumerable<IAnimatable> GetAnimatables() => Enumerable.Empty<IAnimatable>();
     }

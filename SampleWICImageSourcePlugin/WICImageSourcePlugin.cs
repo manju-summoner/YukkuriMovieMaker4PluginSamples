@@ -7,6 +7,9 @@ namespace SampleWICImageSourcePlugin
 {
     public class WICImageSourcePlugin : IImageFileSourcePlugin
     {
+        /// <summary>
+        /// プラグインの名前
+        /// </summary>
         public string Name => "サンプル画像読み込みプラグイン";
 
         /// <summary>

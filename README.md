@@ -58,6 +58,10 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 ### 多言語化プラグイン
 - [SampleLocalizePlugin](./SampleLocalizePlugin/)
 
+### コントロールの一覧とカスタムコントロール
+- [SamplePropertyEditors](./SamplePropertyEditores/)
+アイテム編集エリアで利用できるコントロールの一覧と、カスタムコントロールのサンプルです
+
 ## リポジトリのトピック
 プラグインをGitHubで公開する場合、検索性向上のためリポジトリの[Topics欄](https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)に以下のトピックを設定することを推奨します。
 

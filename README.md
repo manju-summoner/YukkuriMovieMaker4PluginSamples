@@ -41,7 +41,7 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 - [SampleShapePlugin](./SampleShapePlugin/)
 
 ### 動画書き出しプラグイン
-- [SampleVideoWriterPlugin](./SampleVideoWriterPlugin/)
+- [SampleVideoFileWriterPlugin](./SampleVideoFileWriterPlugin/)
 
 ### 音声エフェクト
 - [SampleAudioEffect](./SampleAudioEffect/)

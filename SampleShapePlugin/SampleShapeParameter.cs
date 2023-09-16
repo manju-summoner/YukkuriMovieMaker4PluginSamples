@@ -20,6 +20,13 @@ namespace SampleShapePlugin
         [AnimationSlider("F0","px", 0, 100)]
         public Animation Size { get; } = new Animation(100, 0, 1000);
 
+        //必ず引数なしのコンストラクタを定義してください。
+        //これがないとプロジェクトファイルの読み込みに失敗します。
+        public SampleShapeParameter():this(null)
+        {
+
+        }
+
         public SampleShapeParameter(SharedDataStore? sharedData) : base(sharedData)
         {
 

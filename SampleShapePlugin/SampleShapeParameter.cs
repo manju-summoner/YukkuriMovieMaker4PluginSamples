@@ -37,22 +37,22 @@ namespace SampleShapePlugin
         /// </summary>
         /// <param name="keyFrameIndex">キーフレーム番号</param>
         /// <param name="desc">exo出力に必要な各種パラメーター</param>
-        /// <param name="shapeMaskParameters">マスクのexo出力に必要な各種パラメーター</param>
+        /// <param name="shapeMaskDesc">マスクのexo出力に必要な各種パラメーター</param>
         /// <returns>exoフィルタ</returns>
-        public override IEnumerable<string> CreateMaskExoFilter(int keyFrameIndex, ExoOutputDescription desc, ShapeMaskParameters shapeMaskParameters)
+        public override IEnumerable<string> CreateMaskExoFilter(int keyFrameIndex, ExoOutputDescription desc, ShapeMaskExoOutputDescription shapeMaskDesc)
         {
             int fps = desc.VideoInfo.FPS;
             return new[]
             {
                 $"_name=マスク\r\n" +
-                $"_disable={(shapeMaskParameters.IsEnabled ? 0 : 1)}\r\n" +
-                $"X={shapeMaskParameters.X.ToExoString(keyFrameIndex, "F1",fps)}\r\n" +
-                $"Y={shapeMaskParameters.Y.ToExoString(keyFrameIndex, "F1",fps)}\r\n" +
-                $"回転={shapeMaskParameters.Rotation.ToExoString(keyFrameIndex, "F2",fps)}\r\n" +
+                $"_disable={(shapeMaskDesc.IsEnabled ? 0 : 1)}\r\n" +
+                $"X={shapeMaskDesc.X.ToExoString(keyFrameIndex, "F1",fps)}\r\n" +
+                $"Y={shapeMaskDesc.Y.ToExoString(keyFrameIndex, "F1",fps)}\r\n" +
+                $"回転={shapeMaskDesc.Rotation.ToExoString(keyFrameIndex, "F2",fps)}\r\n" +
                 $"サイズ=100\r\n" +
                 $"縦横比=0\r\n" +
-                $"ぼかし={shapeMaskParameters.Blur.ToExoString(keyFrameIndex, "F0",fps)}\r\n" +
-                $"マスクの反転={(shapeMaskParameters.IsInverted?1:0):F0}\r\n" +
+                $"ぼかし={shapeMaskDesc.Blur.ToExoString(keyFrameIndex, "F0",fps)}\r\n" +
+                $"マスクの反転={(shapeMaskDesc.IsInverted?1:0):F0}\r\n" +
                 $"元のサイズに合わせる=0\r\n" +
                 $"type=0\r\n" +
                 $"name=\r\n" +

@@ -37,7 +37,7 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 ### 立ち絵読み込みプラグイン
 - [SampleTachiePlugin](./SampleTachiePlugin/)
 
-### 図形プラグイン（未実装。2023/10/01リリース予定）
+### 図形プラグイン
 - [SampleShapePlugin](./SampleShapePlugin/)
 
 ### 動画書き出しプラグイン

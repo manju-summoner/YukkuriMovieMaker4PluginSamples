@@ -1,4 +1,4 @@
-﻿# SampleShapePlugin（未実装。2023/10/01リリース予定）
+﻿# SampleShapePlugin
 図形のサンプルプラグインです。
 四角形の描画をサポートします。
 

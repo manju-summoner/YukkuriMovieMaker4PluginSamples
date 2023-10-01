@@ -90,3 +90,10 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 | 種類 | ハッシュタグ |
 | --- | --- |
 | 共通 | [#YMM4Plugin](https://twitter.com/search?q=%23YMM4Plugin) |
+
+## BOOTH タグ
+プラグインをBOOTHで公開する場合、検索性向上のため以下のハッシュタグを設定することを推奨します。
+
+| 種類 | タグ |
+| --- | --- |
+| 共通 | [#YMM4Plugin](https://booth.pm/ja/search/YMM4Plugin) |

@@ -1,4 +1,5 @@
 ﻿using YukkuriMovieMaker.Plugin.FileSource;
+using System.IO;
 
 namespace SampleAudioSourcePlugin
 {

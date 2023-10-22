@@ -64,6 +64,9 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 ### コントロールの一覧とカスタムコントロール
 - [SamplePropertyEditors](./SamplePropertyEditors/)
 
+### 場面切り替えプラグイン
+- [SampleTransitionPlugin](./SampleTransitionPlugin/)
+
 アイテム編集エリアで利用できるコントロールの一覧と、カスタムコントロールのサンプルです
 
 ## リポジトリのトピック
@@ -83,6 +86,7 @@ YMM4フォルダ内に存在しないdllを読み込んでいる場合、そのdllも一緒にコピーしてくだ
 | 映像エフェクト | [ymm4-video-effect](https://github.com/topics/ymm4-video-effect) |
 | 音声合成プラグイン | [ymm4-voice](https://github.com/topics/ymm4-voice) |
 | AIテキスト補完プラグイン | [ymm4-text-completion](https://github.com/topics/ymm4-text-completion) |
+| 場面切り替えプラグイン | [ymm4-transition](https://github.com/topics/ymm4-transition) |
 
 ## X（Twitter）ハッシュタグ
 プラグインをTwitterで公開する場合、検索性向上のため以下のハッシュタグを設定することを推奨します。

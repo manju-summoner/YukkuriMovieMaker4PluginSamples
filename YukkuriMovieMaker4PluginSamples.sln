@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleShapePlugin", "Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplePropertyEditors", "SamplePropertyEditors\SamplePropertyEditors.csproj", "{8CB05509-975E-45AA-91CB-97A4372D4C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAudioSpectrumPlugin", "SampleAudioSpectrumPlugin\SampleAudioSpectrumPlugin.csproj", "{F99F28A5-F0D1-4207-8703-2C946A1D4BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAudioSpectrumPlugin", "SampleAudioSpectrumPlugin\SampleAudioSpectrumPlugin.csproj", "{F99F28A5-F0D1-4207-8703-2C946A1D4BCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTransitionPlugin", "SampleTransitionPlugin\SampleTransitionPlugin.csproj", "{262C87CE-FD33-4471-B1E3-F0B562373032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,18 @@ Global
 		{F99F28A5-F0D1-4207-8703-2C946A1D4BCD}.Release|x64.Build.0 = Release|Any CPU
 		{F99F28A5-F0D1-4207-8703-2C946A1D4BCD}.Release|x86.ActiveCfg = Release|Any CPU
 		{F99F28A5-F0D1-4207-8703-2C946A1D4BCD}.Release|x86.Build.0 = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|x64.Build.0 = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Debug|x86.Build.0 = Debug|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|x64.ActiveCfg = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|x64.Build.0 = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|x86.ActiveCfg = Release|Any CPU
+		{262C87CE-FD33-4471-B1E3-F0B562373032}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

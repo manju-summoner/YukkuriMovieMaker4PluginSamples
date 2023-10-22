@@ -21,6 +21,8 @@ public InnerClass Value { get=>... set=>... }
 
 # カスタムコントロールを作成する場合
 YMM4に初期搭載されているコントロール以外を使用する場合、
+
 - IPropertyEditorControlを実装したコントロール
-- PropertyEditorAttributeを継承したアイテム編集コントロール属性
+- PropertyEditorAttribute2を継承したアイテム編集コントロール属性
+
 の2つを実装する必要があります。

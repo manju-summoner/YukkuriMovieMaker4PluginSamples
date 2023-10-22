@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using YukkuriMovieMaker.Commons;
+using YukkuriMovieMaker.Views.Converters;
 
 namespace SamplePropertyEditors.CustomPropertyEditor
 {
-    internal class IncreaseDecreaseButtonAttribute : PropertyEditorAttribute
+    internal class IncreaseDecreaseButtonAttribute : PropertyEditorAttribute2
     {
         /// <summary>
         /// コントロールを作成する
@@ -23,16 +24,14 @@ namespace SamplePropertyEditors.CustomPropertyEditor
         }
 
         /// <summary>
-        /// コントロールにバインディングを設定する
+        /// コントロールにバインディングを設定する（複数編集対応版）
         /// </summary>
         /// <param name="control">Create()で作成したコントロール</param>
-        /// <param name="item">タイムライン上に配置されているアイテムのインスタンス</param>
-        /// <param name="propertyOwner">プロパティを保持しているクラスのインスタンス</param>
-        /// <param name="propertyInfo">この属性が適用されているプロパティの情報</param>
-        public override void SetBindings(FrameworkElement control, object item, object propertyOwner, PropertyInfo propertyInfo)
+        /// <param name="itemProperties">編集対象のプロパティ</param>
+        public override void SetBindings(FrameworkElement control, ItemProperty[] itemProperties)
         {
             var editor = (IncreaseDecreaseButton)control;
-            editor.SetBinding(IncreaseDecreaseButton.ValueProperty, new Binding(propertyInfo.Name) { Source = propertyOwner });
+            editor.SetBinding(IncreaseDecreaseButton.ValueProperty, ItemPropertiesBinding.Create(itemProperties));
         }
 
         /// <summary>
@@ -43,5 +42,6 @@ namespace SamplePropertyEditors.CustomPropertyEditor
         {
             BindingOperations.ClearBinding(control, IncreaseDecreaseButton.ValueProperty);
         }
+
     }
 }

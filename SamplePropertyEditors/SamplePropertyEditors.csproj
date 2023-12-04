@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+	<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
 	<UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,10 +9,10 @@
 
   <ItemGroup>
     <Reference Include="YukkuriMovieMaker.Controls">
-      <HintPath>D:\repos\YukkuriMovieMaker\YukkuriMovieMaker\bin\Debug\net7.0-windows10.0.19041.0\YukkuriMovieMaker.Controls.dll</HintPath>
+      <HintPath>D:\repos\YukkuriMovieMaker\YukkuriMovieMaker\bin\Debug\net8.0-windows10.0.19041.0\YukkuriMovieMaker.Controls.dll</HintPath>
     </Reference>
     <Reference Include="YukkuriMovieMaker.Plugin">
-      <HintPath>D:\repos\YukkuriMovieMaker\YukkuriMovieMaker\bin\Debug\net7.0-windows10.0.19041.0\YukkuriMovieMaker.Plugin.dll</HintPath>
+      <HintPath>D:\repos\YukkuriMovieMaker\YukkuriMovieMaker\bin\Debug\net8.0-windows10.0.19041.0\YukkuriMovieMaker.Plugin.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -1,11 +1,16 @@
 # ゆっくりMovieMaker4 プラグインサンプル集
+
+> [!NOTE]
+> YMM v4.23.0.0で.NET7から.NET8に移行したため、プロジェクトの`<TargetFramework>`を`net7.0-windows10.0.19041.0`から`net8.0-windows10.0.19041.0`に変更する必要があります。
+> 以前のバージョンの情報をもとにプラグインを作成していて、`"XXX" の異なるバージョン間で、解決できない競合が見つかりました。`という警告が表示されビルドできない場合、上記の変更を適用後、`ビルド(B) → ソリューションのクリーン(C)`を実行してください。
+
 ## プロジェクトの作成方法
 .NET7用のクラスライブラリプロジェクトを作成してください。  
 ### プロジェクトの設定
-プロジェクトの作成後、プロジェクトファイルの`<TargetFramework>`を`net7.0-windows10.0.19041.0`に変更し、その下に`<UseWPF>true</UseWPF>`を追加してください。
+プロジェクトの作成後、プロジェクトファイルの`<TargetFramework>`を`net8.0-windows10.0.19041.0`に変更し、その下に`<UseWPF>true</UseWPF>`を追加してください。
 ```xml
 <PropertyGroup>
-    <TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <UseWPF>true</UseWPF>
 
     ...省略...

@@ -28,7 +28,7 @@ namespace SamplePropertyEditors.CustomPropertyEditor
             set { SetValue(ValueProperty, value); }
         }
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register(nameof(Value), typeof(int), typeof(IncreaseDecreaseButton), new PropertyMetadata(0));
+            DependencyProperty.Register(nameof(Value), typeof(int), typeof(IncreaseDecreaseButton), new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public event EventHandler? BeginEdit;
         public event EventHandler? EndEdit;

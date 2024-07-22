@@ -2,7 +2,7 @@
 using YukkuriMovieMaker.Commons;
 using YukkuriMovieMaker.Player.Video;
 
-namespace SampleShapePlugin
+namespace SampleShapePlugin.SampleShape
 {
     internal class SampleShapeSource : IShapeSource
     {
@@ -24,7 +24,7 @@ namespace SampleShapePlugin
             this.devices = devices;
             this.sampleShapeParameter = sampleShapeParameter;
 
-            whiteBrush = devices.DeviceContext.CreateSolidColorBrush(new Vortice.Mathematics.Color4(1,1,1,1));
+            whiteBrush = devices.DeviceContext.CreateSolidColorBrush(new Vortice.Mathematics.Color4(1, 1, 1, 1));
         }
 
 
@@ -48,11 +48,11 @@ namespace SampleShapePlugin
 
             commandList?.Dispose();//新規作成前に、前回のCommandListを必ず破棄する
             commandList = dc.CreateCommandList();
-            
+
             dc.Target = commandList;
             dc.BeginDraw();
             dc.Clear(null);
-            dc.FillRectangle(new Vortice.RawRectF((float)-size/2, (float)-size/2, (float)size /2, (float)size /2), whiteBrush);
+            dc.FillRectangle(new Vortice.RawRectF((float)-size / 2, (float)-size / 2, (float)size / 2, (float)size / 2), whiteBrush);
             dc.EndDraw();
             dc.Target = null;//Targetは必ずnullに戻す。
             commandList.Close();//CommandListはEndDraw()の後に必ずClose()を呼んで閉じる必要がある
@@ -60,7 +60,7 @@ namespace SampleShapePlugin
             this.size = size;
 
         }
-        
+
         #region IDisposable
         private bool disposedValue;
         protected virtual void Dispose(bool disposing)

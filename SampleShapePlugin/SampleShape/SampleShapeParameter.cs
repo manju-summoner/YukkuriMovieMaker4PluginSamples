@@ -7,9 +7,9 @@ using YukkuriMovieMaker.Player.Video;
 using YukkuriMovieMaker.Plugin.Shape;
 using YukkuriMovieMaker.Project;
 
-namespace SampleShapePlugin
+namespace SampleShapePlugin.SampleShape
 {
-    internal class SampleShapeParameter : ShapeParameterBase
+    internal class SampleShapeParameter(SharedDataStore? sharedData) : ShapeParameterBase(sharedData)
     {
         /// <summary>
         /// アイテム編集エリアに表示する音声の設定項目。
@@ -17,17 +17,12 @@ namespace SampleShapePlugin
         /// [AnimationSlider]以外のアイテム編集コントロール属性の一覧はSamplePropertyEditorsプロジェクトを参照してください。
         /// </summary>
         [Display(Name = "サイズ")]
-        [AnimationSlider("F0","px", 0, 100)]
+        [AnimationSlider("F0", "px", 0, 100)]
         public Animation Size { get; } = new Animation(100, 0, 1000);
 
         //必ず引数なしのコンストラクタを定義してください。
         //これがないとプロジェクトファイルの読み込みに失敗します。
-        public SampleShapeParameter():this(null)
-        {
-
-        }
-
-        public SampleShapeParameter(SharedDataStore? sharedData) : base(sharedData)
+        public SampleShapeParameter() : this(null)
         {
 
         }
@@ -42,8 +37,8 @@ namespace SampleShapePlugin
         public override IEnumerable<string> CreateMaskExoFilter(int keyFrameIndex, ExoOutputDescription desc, ShapeMaskExoOutputDescription shapeMaskDesc)
         {
             int fps = desc.VideoInfo.FPS;
-            return new[]
-            {
+            return
+            [
                 $"_name=マスク\r\n" +
                 $"_disable={(shapeMaskDesc.IsEnabled ? 0 : 1)}\r\n" +
                 $"X={shapeMaskDesc.X.ToExoString(keyFrameIndex, "F1",fps)}\r\n" +
@@ -57,7 +52,7 @@ namespace SampleShapePlugin
                 $"type=0\r\n" +
                 $"name=\r\n" +
                 $"mode=0\r\n"
-            };
+            ];
         }
 
         /// <summary>
@@ -69,8 +64,8 @@ namespace SampleShapePlugin
         public override IEnumerable<string> CreateShapeItemExoFilter(int keyFrameIndex, ExoOutputDescription desc)
         {
             var fps = desc.VideoInfo.FPS;
-            return new[]
-            {
+            return
+            [
                     $"_name=図形\r\n" +
                     $"サイズ={Size.ToExoString(keyFrameIndex, "F0", fps)}\r\n" +
                     $"縦横比=0\r\n" +
@@ -78,7 +73,7 @@ namespace SampleShapePlugin
                     $"type=0\r\n" +
                     $"color=FFFFFF\r\n" +
                     $"name=\r\n"
-            };
+            ];
         }
 
         /// <summary>
@@ -95,7 +90,7 @@ namespace SampleShapePlugin
         /// このクラス内のIAnimatable一覧を返す。
         /// </summary>
         /// <returns>IAnimatable一覧</returns>
-        protected override IEnumerable<IAnimatable> GetAnimatables() => new IAnimatable[] { Size };
+        protected override IEnumerable<IAnimatable> GetAnimatables() => [Size];
 
         /// <summary>
         /// 設定を一時的に保存する。

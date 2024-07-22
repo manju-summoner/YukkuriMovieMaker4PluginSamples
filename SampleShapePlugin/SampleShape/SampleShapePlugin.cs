@@ -1,7 +1,7 @@
 ﻿using YukkuriMovieMaker.Plugin.Shape;
 using YukkuriMovieMaker.Project;
 
-namespace SampleShapePlugin
+namespace SampleShapePlugin.SampleShape
 {
     public class SampleShapePlugin : IShapePlugin
     {

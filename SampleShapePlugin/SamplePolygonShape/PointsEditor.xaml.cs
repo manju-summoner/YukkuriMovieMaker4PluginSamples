@@ -55,7 +55,7 @@ namespace SampleShapePlugin.SamplePolygonShape
             //Point内のAnimationを変更した際にPointsを更新する
             //複数のアイテムを選択している場合にすべてのアイテムを更新するために必要
             var vm = DataContext as PointsEditorViewModel;
-            vm?.ApplyToSource();
+            vm?.CopyToOtherItems();
             EndEdit?.Invoke(this, e);
         }
     }

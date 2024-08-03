@@ -116,12 +116,12 @@ namespace SampleShapePlugin.SamplePolygonShape
                 command.RaiseCanExecuteChanged();
         }
 
-        public void ApplyToSource()
+        public void CopyToOtherItems()
         {
-            BeginEdit?.Invoke(this, EventArgs.Empty);
-            foreach (var property in properties)
+            //現在のアイテムの内容を他のアイテムにコピーする
+            var otherProperties = properties.Skip(1);
+            foreach (var property in otherProperties)
                 property.SetValue(Points.Select(x=>new SamplePolygonShapePoint(x)).ToImmutableList());
-            EndEdit?.Invoke(this, EventArgs.Empty);
         }
 
 

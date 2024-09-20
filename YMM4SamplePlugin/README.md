@@ -1,0 +1,19 @@
+﻿# 作成可能なプラグインの一覧
+
+- エフェクト
+  - [音声エフェクト](./AudioEffect/)
+  - [映像エフェクト](./VideoEffect/)
+- ファイル読み込み
+  - [音声読み込みプラグイン](./AudioSource/)
+  - [映像読み込みプラグイン](./VideoSource/)
+  - [画像読み込みプラグイン](./ImageSource/)
+  - [立ち絵読み込みプラグイン](./Tachie/)]
+- [ファイル書き出しプラグイン](./FileWriter/)
+- [波形プラグイン](./AudioSpectrum/)]
+- [図形プラグイン](./Shape/)
+- [テキスト補完](./TextCompletion/)
+- [場面切り替え](./Transition/)
+- [音声合成](./Voice/)
+- その他
+  - [多言語対応サンプル](./Localization/)
+  - [エディタサンプル](./PropertyEditor/) 

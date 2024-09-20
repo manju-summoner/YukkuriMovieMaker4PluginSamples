@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "YMM4SamplePlugin": {
+      "commandName": "Project"
+    },
+    "プロファイル 1": {
+      "commandName": "Executable"
+    }
+  }
+}

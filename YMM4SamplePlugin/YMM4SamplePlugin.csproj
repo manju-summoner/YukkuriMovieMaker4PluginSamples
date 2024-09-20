@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--このプロジェクトをベースにプラグインを開発する場合は「ここから」～「ここまで」の部分を削除する-->
+		<!--ここから-->
+		<COMReference Include="SpeechLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>4</VersionMinor>
+			<VersionMajor>5</VersionMajor>
+			<Guid>c866ca3a-32f7-11d2-9602-00c04f8ee628</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+
+		<EmbeddedResource Include="VideoEffect\SampleHLSLShaderVideoEffect\PixelShader.cso" />
+		<EmbeddedResource Update="Localization\Resource.resx">
+			<LastGenOutput>Resource.Designer.cs</LastGenOutput>
+			<Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<Compile Update="Localization\Resource.Designer.cs">
+			<DependentUpon>Resource.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<!--ここまで-->
+		
+		<Reference Include="YukkuriMovieMaker.Controls">
+			<HintPath>$(YMM4DirPath)YukkuriMovieMaker.Controls.dll</HintPath>
+		</Reference>
+		<Reference Include="YukkuriMovieMaker.Plugin">
+			<HintPath>$(YMM4DirPath)YukkuriMovieMaker.Plugin.dll</HintPath>
+		</Reference>
+		<Reference Include="SharpGen.Runtime">
+			<HintPath>$(YMM4DirPath)SharpGen.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="SharpGen.Runtime.COM">
+			<HintPath>$(YMM4DirPath)SharpGen.Runtime.COM.dll</HintPath>
+		</Reference>
+		<Reference Include="Vortice.Direct2D1">
+			<HintPath>$(YMM4DirPath)Vortice.Direct2D1.dll</HintPath>
+		</Reference>
+		<Reference Include="Vortice.DirectX">
+			<HintPath>$(YMM4DirPath)Vortice.DirectX.dll</HintPath>
+		</Reference>
+		<Reference Include="Vortice.Mathematics">
+			<HintPath>$(YMM4DirPath)Vortice.Mathematics.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<!--ビルド後にYMM4のプラグインフォルダにdllをコピーする-->
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="mkdir &quot;$(YMM4DirPath)$(ProjectName)&quot; &gt; NUL 2&gt;&amp;1&#xD;&#xA;copy &quot;$(TargetPath)&quot; &quot;$(YMM4DirPath)$(ProjectName)\&quot;" />
+	</Target>
+</Project>

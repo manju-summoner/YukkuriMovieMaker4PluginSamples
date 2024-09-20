@@ -50,7 +50,7 @@ YMM4の開発者モードを有効にすると、未解放のDirectXオブジェ
 1. 
 
 ## プラグインの種類一覧
-- [作成可能なプラグインの一覧](./YMM4SamplePluign/)
+- [作成可能なプラグインの一覧](./YMM4SamplePlugin/)
 
 ## リポジトリのトピック
 プラグインをGitHubで公開する場合、検索性向上のためリポジトリの[Topics欄](https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)に以下のトピックを設定することを推奨します。

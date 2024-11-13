@@ -1,12 +1,13 @@
 ﻿using System.Numerics;
 using Vortice.Direct2D1;
 using YukkuriMovieMaker.Commons;
+using YukkuriMovieMaker.Player.Video;
 using YukkuriMovieMaker.Plugin;
 using YukkuriMovieMaker.Plugin.Tachie;
 
 namespace YMM4SamplePlugin.Tachie
 {
-    internal class SampleMultiImageTachieSource : ITachieSource
+    internal class SampleMultiImageTachieSource : ITachieSource2
     {
         readonly IGraphicsDevicesAndContext devices;
 
@@ -32,18 +33,12 @@ namespace YMM4SamplePlugin.Tachie
         /// <summary>
         /// 表示を更新する
         /// </summary>
-        /// <param name="tachieTime">立ち絵アイテム基準の相対時間</param>
-        /// <param name="tachieLength">立ち絵アイテムの長さ</param>
-        /// <param name="faceTime">ボイス・表情アイテム基準の相対時間</param>
-        /// <param name="faceLength">ボイス・表情アイテムの長さ</param>
-        /// <param name="characterParameter">キャラクターに設定されている立ち絵パラメーター</param>
-        /// <param name="itemParameter">立ち絵アイテムに設定されている立ち絵パラメーター</param>
-        /// <param name="faceParameter">ボイス・表情アイテムに設定されている表情パラメーター</param>
-        /// <param name="kuchipaku">口パクの開き具合0~1</param>
-        public void Update(TimeSpan tachieTime, TimeSpan tachieLength, TimeSpan faceTime, TimeSpan faceLength, ITachieCharacterParameter characterParameter, ITachieItemParameter itemParameter, ITachieFaceParameter faceParameter, double kuchipaku)
+
+
+        public void Update(TachieSourceDescription desc)
         {
-            var ip = itemParameter as SampleTachieItemParameter;
-            var fp = faceParameter as SampleTachieFaceParameter;
+            var ip = desc.Tachie?.ItemParameter as SampleTachieItemParameter;
+            var fp = desc.Tachie?.Faces?.FirstOrDefault()?.FaceParameter as SampleTachieFaceParameter;
 
             var file = !string.IsNullOrEmpty(fp?.File) ? fp.File : ip?.File;
             if (isFirst || this.file != file)

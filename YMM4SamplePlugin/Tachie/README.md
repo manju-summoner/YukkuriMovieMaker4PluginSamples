@@ -8,7 +8,7 @@
 
 ## TachieSourceクラス
 立ち絵の読み込みクラスです。
-`ITachieSource`を実装します。
+`ITachieSource2`を実装します。
 
 ## TachieCharacterParameterクラス
 キャラクターに設定する立ち絵用パラメーターです。

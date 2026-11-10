@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Immutable;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -110,6 +111,15 @@ namespace YMM4SamplePlugin.PropertyEditor
         [IncreaseDecreaseButton]
         public int IntValue { get => intValue; set => Set(ref intValue, value); }
         int intValue = 0;
+
+        /// <summary>
+        /// SampleListEditorは、複数選択できるリストを編集するカスタムコントロールのサンプルです。
+        /// 項目の追加・削除・並べ替えができ、並べ替えをUndo/Redoしても、ListBoxの選択が同じ項目に付いてきます。
+        /// </summary>
+        [Display(GroupName = "グループ名", Name = "リスト", Description = "項目の説明")]
+        [SampleListEditor]
+        public ImmutableList<SampleEntry> Entries { get => entries; set => Set(ref entries, value); }
+        ImmutableList<SampleEntry> entries = [];
 
         protected override IEnumerable<IAnimatable> GetAnimatables() => [Animation, Inner];
     }

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="YMM4SamplePlugin.PropertyEditor.CustomPropertyEditor.SampleListEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="root">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="26"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBox"
+                 Grid.Column="0"
+                 Height="120"
+                 SelectionMode="Extended"
+                 ItemsSource="{Binding ElementName=root, Path=Entries}"
+                 DisplayMemberPath="Name"
+                 SelectionChanged="ListBox_SelectionChanged"/>
+        <StackPanel Grid.Column="1">
+            <Button x:Name="addButton" Content="+" Click="AddButton_Click"/>
+            <Button x:Name="removeButton" Content="-" Click="RemoveButton_Click"/>
+            <Button x:Name="moveUpButton" Content="▲" Click="MoveUpButton_Click"/>
+            <Button x:Name="moveDownButton" Content="▼" Click="MoveDownButton_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

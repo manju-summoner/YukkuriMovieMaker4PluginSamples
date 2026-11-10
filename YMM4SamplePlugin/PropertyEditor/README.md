@@ -26,3 +26,8 @@ YMM4に初期搭載されているコントロール以外を使用する場合�
 - PropertyEditorAttribute2を継承したアイテム編集コントロール属性
 
 の2つを実装する必要があります。
+
+| サンプル | 内容 |
+| --- | --- |
+| [IncreaseDecreaseButton](./CustomPropertyEditor/IncreaseDecreaseButton.xaml.cs) | 数値を増減させるボタン |
+| [SampleListEditor](./CustomPropertyEditor/SampleListEditor.xaml.cs) | 複数選択できるリストの編集（追加・削除・並べ替え）。並べ替えをUndo/Redoしても選択が同じ項目に付いてくる |
